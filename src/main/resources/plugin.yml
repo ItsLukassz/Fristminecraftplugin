@@ -4,6 +4,12 @@ main: itslukass.cryptominers.Cryptominers
 api-version: 1.18
 prefix: "Meemso"
 commands:
+  spawn:
+    description: teleports you to spawn
+    usage: /spawn
+  setspawn:
+    description: sets spawn location to your current location
+    usage: /setspawn
   enderchest:
     description: Ender chest command
     usage: /<command>

@@ -15,9 +15,11 @@ public final class Cryptominers extends JavaPlugin implements Listener {
         // Plugin startup logic
         plugin = this;
         System.out.println("Custom Crypto Miners Started!");
+        // events
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new SheepShearListener(), this);
         getServer().getPluginManager().registerEvents(new JoineaveMessages(), this);
+        // commands
         getCommand("god").setExecutor(new GodCommand());
         getCommand("gmc").setExecutor(new CreativeCommand());
         getCommand("gms").setExecutor(new SurvivalCommand());
@@ -25,6 +27,9 @@ public final class Cryptominers extends JavaPlugin implements Listener {
         getCommand("pm").setExecutor(new privateMessageCommand());
         getCommand("kill").setExecutor(new KIllCommand());
         getCommand("enderchest").setExecutor(new EnderChestCommand());
+        getCommand("setspawn").setExecutor(new SetSpawnCommand());
+        getCommand("spawn").setExecutor(new SpawnCommand());
+        //config.yml
         getConfig().options().copyDefaults();
         saveDefaultConfig();
     }

@@ -1,1 +1,6 @@
 FeedEnabled: true
+spawn:
+  x: -20
+  y: 175
+  z: 0
+  worldname: world
