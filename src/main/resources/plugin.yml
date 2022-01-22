@@ -1,0 +1,31 @@
+name: Cryptominers
+version: '${project.version}'
+main: itslukass.cryptominers.Cryptominers
+api-version: 1.18
+prefix: "Meemso"
+commands:
+  enderchest:
+    description: Ender chest command
+    usage: /<command>
+    aliases:
+      - ec
+  kill:
+    description: Kill command
+    usage: /kills <username> (optional)
+  pm:
+    description: send private messages
+    usage: /pm username message
+  feed:
+    description: sets your hunger to max
+    usage: /feed
+  gms:
+    description: sets your gamemode to survival
+    usage: /gms
+  gmc:
+    description: sets yoru gamemode to creative
+    usage: /gmc
+  god:
+    description: this is a test command
+    usage: /<command> easy way to not die
+    aliases:
+      - plsno
