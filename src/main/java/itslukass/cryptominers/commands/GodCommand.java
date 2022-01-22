@@ -16,7 +16,7 @@ public class GodCommand implements CommandExecutor {
 
             if(p.isInvulnerable()){
                 p.setInvulnerable(false);
-                p.sendMessage("God mode disable");
+                p.sendMessage("God mode disabled");
             } else{
                 p.setInvulnerable(true);
                 p.sendMessage("God mode enabled");

@@ -9,6 +9,11 @@ import org.bukkit.entity.Player;
 
 public class SetSpawnCommand implements CommandExecutor {
 
+    private final Cryptominers pluginspawn;
+
+    public SetSpawnCommand(Cryptominers pluginspawn) {
+        this.pluginspawn = pluginspawn;
+    }
 
 
     @Override
@@ -27,8 +32,8 @@ public class SetSpawnCommand implements CommandExecutor {
 
             // 2nd method
 
-            Cryptominers.getPlugin().getConfig().set("spawn", location);
-            Cryptominers.getPlugin().saveConfig();
+            pluginspawn.getConfig().set("spawn", location);
+            pluginspawn.saveConfig();
             p.sendMessage("Location saved");
 
         }else{

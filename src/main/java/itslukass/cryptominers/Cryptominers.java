@@ -1,7 +1,5 @@
 package itslukass.cryptominers;
-import itslukass.cryptominers.Listeners.JoineaveMessages;
-import itslukass.cryptominers.Listeners.SheepShearListener;
-import itslukass.cryptominers.Listeners.XPBottleBreakListener;
+import itslukass.cryptominers.Listeners.*;
 import itslukass.cryptominers.commands.*;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,6 +17,8 @@ public final class Cryptominers extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new SheepShearListener(), this);
         getServer().getPluginManager().registerEvents(new JoineaveMessages(), this);
+        getServer().getPluginManager().registerEvents(new SpawnListeners(), this);
+        getServer().getPluginManager().registerEvents(new TeleportBowEvent(), this);
         // commands
         getCommand("god").setExecutor(new GodCommand());
         getCommand("gmc").setExecutor(new CreativeCommand());
@@ -27,8 +27,12 @@ public final class Cryptominers extends JavaPlugin implements Listener {
         getCommand("pm").setExecutor(new privateMessageCommand());
         getCommand("kill").setExecutor(new KIllCommand());
         getCommand("enderchest").setExecutor(new EnderChestCommand());
-        getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
+        getCommand("setspawn").setExecutor(new SetSpawnCommand(this));
+        getCommand("vault").setExecutor(new VaultCommand());
+        getCommand("cvault").setExecutor(new CustomVaultCommand());
+        getCommand("fly").setExecutor(new FlyCommand());
+        getCommand("tpbow").setExecutor(new getTPBowCommand());
         //config.yml
         getConfig().options().copyDefaults();
         saveDefaultConfig();

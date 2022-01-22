@@ -4,6 +4,17 @@ main: itslukass.cryptominers.Cryptominers
 api-version: 1.18
 prefix: "Meemso"
 commands:
+  tpbow:
+    description: Gives you a teleport bow
+    usage: /tpbow
+  fly:
+    description: Enables creative flight
+  cvault:
+    description: custom item vault
+    usage: /cvault
+  vault:
+    description: Open a virtual chest
+    usage: /vault <number>
   spawn:
     description: teleports you to spawn
     usage: /spawn
