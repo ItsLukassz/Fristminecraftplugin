@@ -4,6 +4,9 @@ main: itslukass.cryptominers.Cryptominers
 api-version: 1.18
 prefix: "Meemso"
 commands:
+  flyspeed:
+    description: Sets your fly speed
+    usage: /flyspeed <number>
   tpbow:
     description: Gives you a teleport bow
     usage: /tpbow

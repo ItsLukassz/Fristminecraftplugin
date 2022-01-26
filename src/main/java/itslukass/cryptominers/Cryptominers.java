@@ -33,6 +33,7 @@ public final class Cryptominers extends JavaPlugin implements Listener {
         getCommand("cvault").setExecutor(new CustomVaultCommand());
         getCommand("fly").setExecutor(new FlyCommand());
         getCommand("tpbow").setExecutor(new getTPBowCommand());
+        getCommand("flyspeed").setExecutor(new FlySpeedCommand());
         //config.yml
         getConfig().options().copyDefaults();
         saveDefaultConfig();
